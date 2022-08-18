@@ -1,6 +1,7 @@
 # Leer una cadena y devolver el numero de palabras de dicha cadena
 
-cadena = input("Digite una cadena de caracteres: ")
+cadena = str(input("Digite una cadena de palabras --> "))
 
-print (cadena)
-print (len(cadena))
+result = len(cadena.split())
+
+print("Esta cadena tiene " + str(result) + " palabras.")

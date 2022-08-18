@@ -1,27 +1,11 @@
-from contextlib import nullcontext
+# Leer una cadena y devolver cada palabra de la cadena y el nuemero de veces que se repite
 
-##declaracion de la variables
-listaUno=[]
-listaDos=[]
+cadenaPalabras=str(input("Digite una cadena de palabras --> "))
 
+listaPalabras = cadenaPalabras.split()
 
-def add():
-  x=input("DIgite un valor para la lista: ")
-  listaUno.append(x)
-  print("[",listaUno,"]")
+frecuenciaPalab = []
+for w in listaPalabras:
+    frecuenciaPalab.append(listaPalabras.count(w))
 
-
-
-n=True
-
-while True:
-
-  add()
-
-  n=input("Desea continuar agrgando elementos a la lista? (y/n):")
-  if n== 'n' or n=='N':
-    break
-
-listaDos = listaUno
-reverse = listaDos[::-1]
-print("[",reverse,"]")
+print("Pares\n" + str(list(zip(listaPalabras, frecuenciaPalab))))
